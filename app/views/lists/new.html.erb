@@ -1,7 +1,7 @@
-<h1>My new</h1>
-
-<ul>
-  <% @movies.each do |movie| %>
-    <li><%= movie.title %></li>
+<h1>Add a list</h1>
+<%= simple_form_for @list do |f| %>
+    <%= f.input :name, placeholder: "add a list name" %>
+    <%= f.submit class: "btn btn-success" %>
   <% end %>
-</ul>
+
+<%= link_to "Back to lists", lists_path %>
